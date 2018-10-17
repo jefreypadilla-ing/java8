@@ -1,18 +1,16 @@
 package com.jpadilla.java8;
 
-import com.jpadilla.java8.Future.Future;
 import com.jpadilla.java8.bean.Person;
 import com.jpadilla.java8.functional.MethodFuntional;
 import com.jpadilla.java8.interfaces.ITPersona;
 import com.jpadilla.java8.interfaces.PersonaJava7Impl;
 import com.jpadilla.java8.interfaces.PersonaJava8Impl;
+import com.jpadilla.java8.interfaces.types.Examples;
 import com.jpadilla.java8.operations.Operacion;
-import com.jpadilla.java8.operations.OperacionMat;
 import com.jpadilla.java8.operations.OperacionPerson;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.Executors;
 
 /**
  * Lambdas
@@ -25,15 +23,13 @@ public class App
     {
         //App.executeListas();
         //App.executeFunctionalInterface();
-        App.executeFuture();
+        App.executeExampleFuntional();
     }
 
-    public static void executeFuture(){
-        try{
-            Future.calculateAsync();
-        } catch (InterruptedException e){
-            e.printStackTrace();
-        }
+    public static void executeExampleFuntional(){
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
+
+        Examples.printValidatePredicate(list, (x) -> x > 5);
     }
 
     public static void executeFunctionalInterface(){
