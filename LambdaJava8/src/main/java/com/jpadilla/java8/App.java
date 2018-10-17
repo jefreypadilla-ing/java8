@@ -23,7 +23,12 @@ public class App
     {
         //App.executeListas();
         //App.executeFunctionalInterface();
-        App.executeExampleFuntional();
+        //App.executeExampleFuntional();
+        App.executeMetodoReferencia();
+    }
+
+    public static void executeMetodoReferencia(){
+        Examples.printMetodoReferencia();
     }
 
     public static void executeExampleFuntional(){
